@@ -1,7 +1,5 @@
-import { Container, Heading } from "@chakra-ui/react";
 import { AddTodo } from "./components/AddTodo";
-import { TodoList } from "./components/TodoList";
-import { VisibilityFilter } from "./components/VisibilityFilter";
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./components/Header";
 import Login from "./components/Login";
@@ -19,10 +17,10 @@ function App() {
       <Header />
       <div>
         <Switch>
-          <Route exact path="/login">
+          <Route exact path="/login" component={Login}>
             <Login />
           </Route>
-          <ProtectedRoutes exact path="/todo" component={AddTodo} />
+          <ProtectedRoutes path="/todo" component={AddTodo} />
         </Switch>
       </div>
     </Router>

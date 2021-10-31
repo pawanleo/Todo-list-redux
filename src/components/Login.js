@@ -12,26 +12,15 @@ function Login() {
   Uname: '',
   pass: '',
   });
-  const [errorMessage, setErrorMessage] = useState(); // Showing Error Message
+
 
   const handleChange = (event) => {
     setstate({ ...state, [event.target.name]: event.target.value });
   };
   const handleClick = () => {
-    if (state.Uname === '' || state.pass === '') {
-
-      setErrorMessage('* Empty username/password field')
-  }
-
-  else {
      
-      setErrorMessage('')
-
-     
-      localStorage.setItem("token","LoggedIn")
-      history.push('/todo')
-  
-  }
+    localStorage.setItem("token","LoggedIn")
+    history.push('/todo')
     
   };
   return (

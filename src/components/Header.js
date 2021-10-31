@@ -16,7 +16,7 @@ function Header() {
 
             <Nav.Link className="nav-item">
               {" "}
-              <Link to="/">Todo</Link>
+              <Link to="/todo">Todo</Link>
             </Nav.Link>
           </Nav>
         </Container>
